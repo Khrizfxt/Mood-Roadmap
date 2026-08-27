@@ -419,13 +419,30 @@
       margin-top: 4px;
     }
 
+    /* --- "THREE FRIENDS" NOTE (Standalone Box) --- */
+    .about-note {
+      background: rgba(58, 40, 28, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 18px;
+      padding: 22px 26px;
+      text-align: center;
+      color: #d4b483;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+    .about-note:hover {
+      border-color: rgba(245, 197, 24, 0.15);
+    }
+
     /* --- BUTTONS --- */
     .links {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 35px 0 25px;
+      margin: 10px 0 25px;
     }
     .btn {
       display: inline-flex;
@@ -529,6 +546,7 @@
 
     <!-- HEADER -->
     <header>
+      <!-- ✅ YOUR LOGO: mood.jpg (Make sure filename is EXACTLY "mood.jpg" all lowercase) -->
       <img src="mood.jpg" alt="$Mood Logo" class="logo-img" />
       <div class="logo-text">$Mood</div>
       <div class="ticker">🧠 Emotional Support Token</div>
@@ -649,11 +667,15 @@
       </div>
     </section>
 
-    <!-- LINKS / CTA (Team section removed) -->
+    <!-- ✅ THE "THREE FRIENDS" NOTE (Restored and kept safe) -->
+    <div class="about-note">
+      We're three friends building Mood in public. No VC, no complicated utility — just a real community around the emotional side of the degen experience.
+    </div>
+
+    <!-- LINKS / CTA (Team cards & View Chart removed) -->
     <div class="links">
       <a href="https://t.me/whatsyourmoodtoday" class="btn btn-primary">💬 Join Telegram</a>
       <a href="https://x.com/M00D_X" class="btn btn-secondary">🐦 Follow on X</a>
-      <!-- View Chart button removed -->
     </div>
 
     <footer>
