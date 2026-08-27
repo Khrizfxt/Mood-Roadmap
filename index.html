@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$MOOD — Emotional Support Token</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #2c1e14;
+      color: #f5e6c8;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .logo-img {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+    }
+
+    .logo {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #f5c518;
+      margin-bottom: 6px;
+      letter-spacing: -1px;
+    }
+
+    .ticker {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
+      color: #f5c518;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      border: 1px solid rgba(245, 197, 24, 0.35);
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #d4b483;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    /* Section */
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #f5c518;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Roadmap cards */
+    .roadmap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .phase {
+      background: #3a281c;
+      border: 1px solid #5c4033;
+      border-radius: 16px;
+      padding: 20px 22px;
+      transition: border-color 0.2s;
+    }
+
+    .phase:hover {
+      border-color: #f5c518;
+    }
+
+    .phase.current {
+      border-color: #f5c518;
+      background: linear-gradient(135deg, rgba(245, 197, 24, 0.12), rgba(245, 197, 24, 0.04));
+    }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .phase-title {
+      font-weight: 600;
+      font-size: 1.08rem;
+      color: #f5e6c8;
+    }
+
+    .phase-status {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .status-current {
+      background: rgba(245, 197, 24, 0.2);
+      color: #f5c518;
+    }
+
+    .status-upcoming {
+      background: rgba(212, 180, 131, 0.12);
+      color: #d4b483;
+    }
+
+    .phase-desc {
+      color: #d4b483;
+      font-size: 0.95rem;
+    }
+
+    .phase ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      color: #e8d5b5;
+      font-size: 0.95rem;
+    }
+
+    .phase li {
+      margin-bottom: 5px;
+    }
+
+    /* About */
+    .about-text {
+      color: #d4b483;
+      font-size: 1.05rem;
+      background: #3a281c;
+      border: 1px solid #5c4033;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #f5c518;
+      color: #2c1e14;
+    }
+
+    .btn-primary:hover {
+      background: #e6b800;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #f5c518;
+      border: 1.5px solid #f5c518;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245, 197, 24, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 55px;
+      color: #a68b6a;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 2.6rem;
+      }
+      .logo-img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Replace src with your actual logo file path -->
+      <img src="img/photo_2026-08-27_22-07-07.jpg" alt="Mood Logo" class="logo-img">
+      
+      <div class="logo">$Mood</div>
+      <p class="tagline">The emotional support token for the degen rollercoaster</p>
+    </header>
+
+    <section>
+      <h2>📍 Current Stage</h2>
+      <div class="phase current">
+        <div class="phase-header">
+          <div class="phase-title">Foundation</div>
+          <div class="phase-status status-current">In Progress</div>
+        </div>
+        <p class="phase-desc">Building the core identity, socials, and early community before launch.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🗺️ Roadmap</h2>
+      <div class="roadmap">
+
+        <div class="phase">
+          <div class="phase-header">
+            <div class="phase-title">Phase 1 — Launch Prep</div>
+            <div class="phase-status status-upcoming">Upcoming</div>
+          </div>
+          <ul>
+            <li>Finalize branding and meme pack</li>
+            <li>Grow organic presence on X and Telegram</li>
+            <li>Prepare for fair launch on pump.fun</li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <div class="phase-title">Phase 2 — Launch</div>
+            <div class="phase-status status-upcoming">Upcoming</div>
+          </div>
+          <ul>
+            <li>Deploy $MOOD on Solana via pump.fun</li>
+            <li>Share contract address and chart immediately</li>
+            <li>Activate community and early supporters</li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <div class="phase-title">Phase 3 — Community Building</div>
+            <div class="phase-status status-upcoming">Upcoming</div>
+          </div>
+          <ul>
+            <li>Daily presence and engagement</li>
+            <li>Meme contests and community rituals</li>
+            <li>Strengthen Telegram as the home base</li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header">
+            <div class="phase-title">Phase 4 — Growth & Experiments</div>
+            <div class="phase-status status-upcoming">Upcoming</div>
+          </div>
+          <ul>
+            <li>Expand content and visibility</li>
+            <li>Explore simple community-driven ideas</li>
+            <li>Collaborate with like-minded creators</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>💭 Team</h2>
+      <div class="about-text">
+        We’re three friends building Mood in public. No VC, no complicated utility promises just a real community around the emotional side of the degen experience. We’ll update this page as we hit milestones.
+      </div>
+    </section>
+
+    <div class="links">
+      <a href="https://t.me/whatsyourmoodtoday" class="btn btn-primary">Join Telegram</a>
+      <a href="https://x.com/M00D_X" class="btn btn-secondary">Follow on X</a>
+    </div>
+
+    <footer>
+      Built with mood • Solana
+    </footer>
+  </div>
+</body>
+</html>
+
